@@ -59,8 +59,6 @@ export default function SponsorsSection() {
   const fallbackSponsors: Sponsor[] = [
     { name: "Abuja Continental Hotel", logo: "AC.png" },
     { name: "Brave ICONS", logo: "BRAVEICONS.png" },
-    { name: "Kyros Automobile", logo: "KYROS.png" },
-    { name: "PFIPC", logo: "PFIPC.png" },
     { name: "World Trade Center", logo: "WTC.png" },
     { name: "Abuja", logo: "Abuja.jpg" },
     { name: "MTN Nigeria" },
