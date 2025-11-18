@@ -7,7 +7,10 @@ import CountdownTimer from './CountdownTimer';
 
 export default function HeroSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
+  const [showTicketMenu, setShowTicketMenu] = useState(false);
+  const [showInCountryMenu, setShowInCountryMenu] = useState(false);
+
+
   const backgroundImages = [
     '/background/background1.png',
     '/background/background2.png',
@@ -18,7 +21,7 @@ export default function HeroSection() {
   ];
 
   const nextImage = useCallback(() => {
-    setCurrentImageIndex((prevIndex) => 
+    setCurrentImageIndex((prevIndex) =>
       (prevIndex + 1) % backgroundImages.length
     );
   }, [backgroundImages.length]);
@@ -29,8 +32,8 @@ export default function HeroSection() {
   }, [nextImage]);
 
   return (
-    <section 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    <section
+      className="relative min-h-screen flex items-center justify-center"
       role="banner"
       aria-label="Abuja Detty December 2025 Hero Section"
     >
@@ -39,9 +42,8 @@ export default function HeroSection() {
         {backgroundImages.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`absolute inset-0 transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+              }`}
             style={{
               backgroundImage: `url(${image})`,
               backgroundSize: 'cover',
@@ -78,35 +80,116 @@ export default function HeroSection() {
         </div>
 
         {/* Call to Action Buttons */}
-        <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 fade-in-up">
-          <Link 
+        {/* <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 fade-in-up mb-2">
+          <Link
             href="/events"
             className="flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
             <Ticket className="w-6 h-6" />
-            <span>Event Tickets</span>
+            <span>Tickets</span>
           </Link>
-          
-          <Link 
+
+          <Link
             href="/raffle"
             className="flex items-center space-x-2 bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
-            <span>Access/Raffle Ticket</span>
+            <span>Raffles</span>
             <ArrowRight className="w-6 h-6" />
           </Link>
 
-          <Link 
+          <Link
             href="/vote"
             className="flex items-center space-x-2 bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
             <Heart className="w-6 h-6" />
-            <span>Vote Now</span>
+            <span>Vote</span>
+          </Link>
+        </div> */}
+        {/* Call to Action Buttons */}
+        <div className="relative flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 fade-in-up mb-2">
+
+          {/* TICKETS BUTTON (Triggers popup) */}
+          <button
+            onClick={() => {
+              setShowTicketMenu(!showTicketMenu);
+              setShowInCountryMenu(false);
+            }}
+            className="flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+          >
+            <Ticket className="w-6 h-6" />
+            <span>Tickets</span>
+          </button>
+
+          {/* POPUP MENU FOR TICKETS */}
+          {showTicketMenu && (
+            <div className="absolute top-20 bg-white shadow-xl rounded-lg p-4 space-y-3 w-60 z-50 border">
+
+              {/* Diaspora Ticket */}
+              <a
+                href="/diaspora"
+                className="block bg-green-600 text-white px-4 py-3 rounded-md text-center font-semibold hover:bg-green-700 transition"
+              >
+                Diaspora Ticket
+              </a>
+
+              {/* In-Country Button */}
+              <button
+                onClick={() => setShowInCountryMenu(!showInCountryMenu)}
+                className="w-full bg-gray-800 text-white px-4 py-3 rounded-md font-semibold hover:bg-gray-700 transition"
+              >
+                In-Country
+              </button>
+
+              {/* Submenu for In-Country */}
+              {showInCountryMenu && (
+                <div className="space-y-3 pt-2">
+
+                  {/* Access */}
+                  <Link
+                    href="/events"
+                    className="block bg-green-500 text-white px-4 py-3 rounded-md text-center font-semibold hover:bg-green-600 transition"
+                  >
+                    Access
+                  </Link>
+
+                  {/* Raffle */}
+                  <Link
+                    href="/raffle"
+                    className="block bg-red-600 text-white px-4 py-3 rounded-md text-center font-semibold hover:bg-red-700 transition"
+                  >
+                    Raffle
+                  </Link>
+
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* RAFFLES BUTTON (Normal) */}
+          <Link
+            href="/raffle"
+            className="flex items-center space-x-2 bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+          >
+            <span>Raffles</span>
+            <ArrowRight className="w-6 h-6" />
+          </Link>
+
+          {/* VOTE BUTTON (Normal) */}
+          <Link
+            href="/vote"
+            className="flex items-center space-x-2 bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+          >
+            <Heart className="w-6 h-6" />
+            <span>Vote</span>
           </Link>
         </div>
+
+
+
       </div>
 
       {/* Image Navigation Dots */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
+      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
         {backgroundImages.map((_, index) => (
           <button
             key={index}
@@ -119,7 +202,7 @@ export default function HeroSection() {
             aria-label={`Go to background image ${index + 1}`}
           />
         ))}
-      </div>
+      </div> */}
     </section>
   );
 }

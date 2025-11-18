@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
 import { Search, User, Bell, ShoppingCart, Menu, X, LogOut } from 'lucide-react';
@@ -43,14 +44,20 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center px-4">
             <div className="text-green-600 font-bold text-lg">
-              ABUJA DETTY DECEMBER
+              <Image
+                src="/logo.png"
+                alt="abuja detty december"
+                width={56}
+                height={56}
+                className="w-8 h-8 md:w-12 md:h-12 rounded-full"
+              />
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8 flex-1 justify-center">
+          <div className="hidden md:flex items-center space-x-8 flex-1 justify-center px-2">
             <Link 
               href="/" 
               className={`transition-colors ${
