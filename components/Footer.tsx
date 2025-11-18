@@ -61,7 +61,7 @@ export default function Footer() {
     },
     {
       title: "Legal",
-      links: legalPages.length > 0 
+      links: legalPages.length > 0
         ? legalPages.map((page: any) => page.title)
         : ["Privacy Policy", "Terms of Service", "Refund Policy", "Code of Conduct", "Cookie Policy", "GDPR"]
     }
@@ -86,7 +86,7 @@ export default function Footer() {
                   ABUJA<br />DETTY<br />DECEMBER
                 </span>
               </div>
-              
+
               <h3 className="text-2xl font-bold mb-2">Abuja Detty December</h3>
               <p className="text-green-400 text-sm mb-4">Nigeria&apos;s Biggest December Festival</p>
               <p className="text-gray-300 text-sm leading-relaxed mb-6">
@@ -106,7 +106,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-green-400" />
-                <span className="text-sm">Abuja, FCT, Nigeria</span>
+                <span className="text-sm">TF 16, 22 Alexandria Cresecent, Wuse 2, Abuja 900288, FCT, Nigeria</span>
               </div>
             </div>
           </div>
@@ -148,7 +148,7 @@ export default function Footer() {
           <div className="text-gray-400 text-sm mb-4 sm:mb-0">
             © {currentYear} Abuja Detty December. All rights reserved.
           </div>
-          
+
           {/* Scroll to Top Button */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
