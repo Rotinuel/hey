@@ -61,7 +61,7 @@ export default function HeroSection() {
 
         {/* Main Title */}
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-4 fade-in-up">
-          Naija&apos;s Biggest December Celebration
+          Naija&apos;s Capital Biggest December Celebration
         </h1>
 
         {/* Year */}
