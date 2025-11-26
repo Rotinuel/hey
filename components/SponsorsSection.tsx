@@ -62,16 +62,16 @@ export default function SponsorsSection() {
     { name: "DERA", logo: "DERA.jpg" },
     { name: "HAVILS", logo: "HAVILS.jpg" },
     { name: "KENA", logo: "kena.png" },
-    { name: "SALUBRITY", logo: "SALUBRITY.Jpg" },
+    { name: "SALUBRITY", logo: "SALUBRITY.jpg" },
     { name: "VICSCHOOS", logo: "VICSCHOOS.jpg" },
     { name: "World Trade Center", logo: "WTC.png" },
     { name: "Abuja", logo: "Abuja.jpg" },
-    { name: "MTN Nigeria" },
-    { name: "GTBank" },
-    { name: "Zenith Bank" },
-    { name: "Access Bank" },
-    { name: "Dangote Group" },
-    { name: "Shoprite" }
+    // { name: "MTN Nigeria" },
+    // { name: "GTBank" },
+    // { name: "Zenith Bank" },
+    // { name: "Access Bank" },
+    // { name: "Dangote Group" },
+    // { name: "Shoprite" }
   ];
 
   // Use real sponsors if available, otherwise fallback
