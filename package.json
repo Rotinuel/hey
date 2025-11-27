@@ -24,6 +24,7 @@
   "dependencies": {
     "@paystack/inline-js": "^2.22.7",
     "lucide-react": "^0.294.0",
+    "mongodb": "^7.0.0",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18"

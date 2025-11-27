@@ -5,17 +5,29 @@ import { ArrowRight } from 'lucide-react';
 
 export default function NewsletterSection() {
   const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
+    if (!email) return;
+    
+    // Send to API route
+    try {
+      await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, message }),
+      });
+
       setIsSubscribed(true);
       setEmail('');
-      // Here you would typically send the email to your backend
-      console.log('Subscribed email:', email);
+      setMessage('');
+    } catch (error) {
+      console.error('Subscription error:', error);
     }
   };
+    
 
   return (
     <section className="py-20 bg-gray-900">
