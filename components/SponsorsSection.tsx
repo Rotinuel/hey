@@ -66,12 +66,6 @@ export default function SponsorsSection() {
     { name: "VICSCHOOS", logo: "VICSCHOOS.jpg" },
     { name: "World Trade Center", logo: "WTC.png" },
     { name: "Abuja", logo: "Abuja.jpg" },
-    // { name: "MTN Nigeria" },
-    // { name: "GTBank" },
-    // { name: "Zenith Bank" },
-    // { name: "Access Bank" },
-    // { name: "Dangote Group" },
-    // { name: "Shoprite" }
   ];
 
   // Use real sponsors if available, otherwise fallback

@@ -33,7 +33,7 @@ function NewsCard({ image, category, title, description, date }: NewsCardProps) 
           className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
         />
       </div>
-      
+
       {/* Content */}
       <div className="p-6">
         <div className="text-green-600 text-sm font-medium mb-3">{category}</div>
@@ -81,21 +81,21 @@ export default function LatestNewsSection() {
     date: n.date
   })) : [
     {
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      image: "/news/Grammy.png",
       category: "Entertainment",
       title: "Grammy Nominated Artist Confirmed as Headliner for ADD 2025 Opening Concert",
       description: "Grammy-winning artist will headline the opening concert of Abuja Detty December 2025, promising an unforgettable night of music and entertainment for all attendees.",
-      date: "Fri, Aug 22"
+      date: "Fri, Dec 22"
     },
     {
-      image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      image: "/news/international.png",
       category: "Community",
       title: "International Diaspora Support Reaches All-Time High for ADD 2025",
       description: "Early ticket sales show unprecedented international interest, with diaspora bundle purchases from over 50 countries worldwide, demonstrating the global appeal of Nigerian culture.",
-      date: "Fri, Aug 22"
+      date: "Fri, Dec 22"
     },
     {
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      image: "/news/miss.png",
       category: "Competition",
       title: "Miss ADD 2025: Journey to Fame Begins!",
       description: "After weeks of intensive competition, five outstanding young women have emerged as finalists for the Miss ADD 2025 crown, each bringing unique talents and cultural pride.",
