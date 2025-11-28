@@ -95,7 +95,7 @@ export default function LatestNewsSection() {
       date: "Fri, Dec 22"
     },
     {
-      image: "/news/MISS.png",
+      image: "/news/Miss.png",
       category: "Competition",
       title: "Miss ADD 2025: Journey to Fame Begins!",
       description: "After weeks of intensive competition, five outstanding young women have emerged as finalists for the Miss ADD 2025 crown, each bringing unique talents and cultural pride.",
