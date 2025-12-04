@@ -709,7 +709,7 @@ export default function EventsPage() {
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                  className={`m-1 px-4 py-2 rounded-lg font-medium transition-colors ${
                     selectedCategory === category
                       ? 'bg-green-600 text-white'
                       : 'bg-white text-gray-700 border border-green-600 hover:bg-green-50'

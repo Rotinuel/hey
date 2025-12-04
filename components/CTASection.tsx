@@ -1,6 +1,7 @@
 'use client';
 
 import { Calendar, Trophy } from 'lucide-react';
+import Link from 'next/link';
 
 export default function CTASection() {
   return (
@@ -18,15 +19,19 @@ export default function CTASection() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <button className="flex items-center space-x-3 bg-white hover:bg-gray-100 text-green-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors border-2 border-green-600">
-            <Calendar className="w-6 h-6" />
-            <span>Browse Events</span>
-          </button>
-          
-          <button className="flex items-center space-x-3 bg-transparent hover:bg-white/10 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors border-2 border-white">
-            <Trophy className="w-6 h-6" />
-            <span>Start Voting</span>
-          </button>
+          <Link href="/events">
+            <button className="flex items-center space-x-3 bg-white hover:bg-gray-100 text-green-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors border-2 border-green-600">
+              <Calendar className="w-6 h-6" />
+              <span>Browse Events</span>
+            </button>
+          </Link>
+
+          <Link href="/vote">
+            <button className="flex items-center space-x-3 bg-transparent hover:bg-white/10 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors border-2 border-white">
+              <Trophy className="w-6 h-6" />
+              <span>Start Voting</span>
+            </button>
+          </Link>
         </div>
       </div>
     </section>

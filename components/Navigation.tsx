@@ -83,12 +83,12 @@ export default function Navigation() {
               Reservation
             </Link>
             <Link 
-              href="/volunteer" 
+              href="/participate" 
               className={`transition-colors ${
-                isActive('/volunteer') ? 'text-green-400' : 'text-white hover:text-green-400'
+                isActive('/participate') ? 'text-green-400' : 'text-white hover:text-green-400'
               }`}
             >
-              Volunteer
+              Participate
             </Link>
             <Link 
               href="/gallery" 
@@ -229,13 +229,13 @@ export default function Navigation() {
                 Reservation
               </Link>
               <Link 
-                href="/volunteer" 
+                href="/participate" 
                 className={`transition-colors ${
-                  isActive('/volunteer') ? 'text-green-400' : 'text-white hover:text-green-400'
+                  isActive('/participate') ? 'text-green-400' : 'text-white hover:text-green-400'
                 }`}
                 onClick={toggleMenu}
               >
-                Volunteer
+                Participate
               </Link>
               <Link 
                 href="/gallery" 
