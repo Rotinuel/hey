@@ -19,7 +19,7 @@ export default function CountdownTimer() {
 
   useEffect(() => {
     // Set target date to December 21, 2025 at 12:00 AM WAT (West Africa Time)
-    const targetDate = new Date('2025-12-21T00:00:00').getTime();
+    const targetDate = new Date('2025-12-26T00:00:00').getTime();
     
     // Log for debugging
     console.log('Target Date:', new Date(targetDate).toLocaleString());
